@@ -1,0 +1,362 @@
+.slider-active{
+    position: relative;
+}
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    opacity: 1;
+    transition: all 0.4s linear;
+    left: 0;
+    background-color:#2e4db9;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.arrows{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    opacity: 1;
+    transition: all 0.4s linear;
+    right: 0;
+    background-color: #2e4db9;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.slider-list{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.slide-track{
+    position: relative;
+    top: 0;
+    opacity: 1;
+    width: 2048px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate3d(0, 0, 0);
+
+}
+
+.single-slider{
+    float: left;
+    background-image: url(../images/bg-1.jpg);
+    width: 1520px;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    opacity: 1;
+    overflow: hidden;
+    transition: 500ms ease 0s;
+    height: 800px;
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+.single-slider {
+    width: 1024px;
+    height: 700px;
+}
+}
+@media (min-width: 768px) and (max-width: 991.98px){
+.single-slider {
+    width: 800px;
+    height: 600px;
+}
+}
+
+@media  (max-width: 575.98px) and (max-width: 440px){
+.single-slider {
+    width: 440px;
+    height: 500px;
+}
+}
+
+@media only screen and (max-width: 400px){
+    .single-slider {
+        width: 375px;
+        height: 500px;
+    }
+}
+
+.single-sliders{
+    float: left;
+    background-image: url(../images/bg-2.jpg);
+    width: 1450px;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    opacity: 1;
+    overflow: hidden;
+    transition: 500ms ease 0s;
+    height: 800px;
+    
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+.single-sliders {
+    height: 700px;
+    width: 1024px;
+}
+}
+@media (min-width: 768px) and (max-width: 991.98px){
+.single-sliders {
+    height: 600px;
+    width: 800px;
+}
+}
+
+@media  (max-width: 575.98px) and (max-width: 440px){
+.single-sliders {
+    height: 500px;
+    width: 440px;
+}
+}
+
+@media only screen and (max-width: 400px){
+    .single-sliders {
+        height: 500px;
+        width: 375px;
+    }
+}
+
+
+
+.text{
+    animation-delay: 1s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #4451eb;
+    margin: 0;
+    font-size: 38px;
+}
+
+.bg-cover{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.up{
+    background-color: #2e4db9;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 60px;
+    font-family: 'Poppins', sans-serif;
+    border: 4px solid #bfc9ea;
+    color: #fff;
+    transition: all 0.4s linear;
+    text-decoration: none;
+
+}
+
+.abouts h3{
+    color:#4451eb;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.abouts h3 span{
+    font-weight: 700;
+    color: #2c2d3e;
+    font-size: 28px;
+    margin-right: 8px;
+}
+
+.sec-pad{
+    padding:60px 0;
+}
+
+.pad-sm{
+    padding-bottom:30px;
+    margin-top: 25px;
+}
+
+.read{
+    text-align: right;
+}
+
+.abouts a{
+    text-decoration: none;
+}
+
+.abouts p{
+    padding-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.about-content{
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+
+.read-more{
+    padding: 0 15px;
+    line-height: 35px;
+    background-color: #2e4db9;
+    color: #fff;
+    border: 0;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.4s linear;
+}
+
+.bg-gray{
+    background-color: #f8f9fa;
+}
+
+.section-title{
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.section-title h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color:#4451eb;
+    padding-top: 11px;
+}
+
+.divider{
+    position: relative;
+    display: inline-block;
+    background: #2543f3;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.section-title p{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+
+.section-title img{
+    width: 40px;
+    height: 40px;
+}
+
+.single-services{
+    position: relative;
+    display: flex;
+    column-gap: 20px;
+    padding-top: 25px;
+    
+}
+
+.single-services-1{
+    position: relative;
+    display: flex;
+    column-gap: 20px;
+    margin-top: 45px;
+}
+
+.line-r{
+border-right: 1px dashed #cdd2e2;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .line-r{
+        border-right: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575.98px){
+    .line-r{
+        border-right: none;
+    }
+}
+
+.services-icon{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.services-icon img{
+    width: 45px;
+    height: 45px;
+}
+
+.line-b{
+    border-bottom: 1px dashed #cdd2e2;
+}
+
+.services-cont h4{
+    padding-bottom: 7px;
+    font-family: 'Poppins', sans-serif;
+    color: #4451eb;
+    font-weight: 700;
+    margin: 0;
+}
+
+.services-cont p {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.client{
+    transition: all 0.8s ease 0s;
+    margin-top: 25px;
+}
+
+.wid{
+    height: 200px;
+}
+
+
+.card-body h5{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.card-text{
+    text-transform: uppercase;
+}
+
+.price{
+    color: #2e4db9;
+    font-size: 20px;
+    font-weight: 600;
+}

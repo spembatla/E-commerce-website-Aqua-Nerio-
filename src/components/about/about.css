@@ -1,0 +1,141 @@
+.page-banner{
+    background-image: url(../images/page-banner.jpg);
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.sec-pad{
+    padding:60px 0;
+}
+
+.section-title{
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.section-title h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color:#4451eb;
+    padding-top: 11px;
+}
+
+.divider{
+    position: relative;
+    display: inline-block;
+    background: #2543f3;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.about-content h3{
+    color:#4451eb;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.about-content h3 span{
+    font-weight: 700;
+    color: #2c2d3e;
+    font-size: 28px;
+    margin-right: 8px;
+    text-transform: uppercase;
+}
+
+.content-p{
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+
+h6{
+    font-family: 'Poppins', sans-serif;
+    color: #4451eb;
+    font-weight: 700;
+    margin: 0;
+}
+
+.list-items{
+    list-style-type: none;
+}
+
+.list-items li{
+    padding-left: 0;
+    font-size: 16px;
+    color: #000;
+    letter-spacing: 1px;
+    line-height: 35px;
+    position: relative;
+    font-weight: 400;
+}
+
+.list-items li i{
+    color: #2f489a;
+    font-weight: 800;
+    margin-right: 6px;
+}
+
+.section-title{
+    font-weight: 800;
+}
+
+.about-image img{
+    width: 100%;
+    padding: 5px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 40px rgb(82 85 90 / 10%);
+}
+
+.card-style{
+    margin-top: 15px;
+    line-height: 35px;
+}
+.card-style-top{
+    display: flex;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-icon img{
+    width: 60px;
+    height: 60px;
+}
+
+.card-info-title{
+    font-size: 16px;
+    font-weight: 400;
+    color: #4451eb;
+}
+
+.card-loc-span i{
+    margin-right: 3px;
+}
+
+.card-loc-span{
+    font-size: 14px;
+}
+
+.card-texts{
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 35px;
+    font-size: 16px;
+    border-radius: 5px;
+}
