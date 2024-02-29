@@ -1,7 +1,21 @@
 import React from "react";
 import "./about.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const About = () => {
+  var setting = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+
+  };
+
   return (
     <div>
       <section className="page-banner ">
@@ -172,6 +186,7 @@ export const About = () => {
             </div>
           </div>
           <div className="row">
+            <Slider {...setting}>
             <div className="col-lg-6 col-sm-6  card-style">
               <div className="card-style">
                 <div className="card-style-top">
@@ -234,6 +249,7 @@ export const About = () => {
                 </p>
               </div>
             </div>
+            </Slider>
           </div>
         </div>
       </section>

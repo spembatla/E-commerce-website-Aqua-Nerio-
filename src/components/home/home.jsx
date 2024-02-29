@@ -1,24 +1,92 @@
 import React from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const Home = () => {
+  var settings = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ],
+    
+    
+  };
+
+  var setting = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        setting: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 800,
+        setting: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        setting: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ],
+
+  };
+
   return (
     <div>
       <section>
-        <div
-          className="slider-active  carousel slide slick-slider"
-          data-bs-ride="carousel"
-        >
-          <span className="prev arrow">
-            <i className="fa fa-angle-left"></i>
-          </span>
-          <div
-            className="slider-list draggable carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div className="slide-track curosel-inner">
-              <div className="single-slider bg-cover d-flex align-items-center curosel-item-active ">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://www.aquanerio.com/assetsweb/images/slider/bg-1.jpg"
+                alt="bg-1"
+                class="backgroundImage"
+              />
+              <div class="carousel-caption">
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-8">
@@ -42,7 +110,14 @@ export const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="single-sliders d-none bg-cover d-flex align-items-center curosel-item">
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://www.aquanerio.com/assetsweb/images/slider/bg-3.jpg"
+                alt="bg-3"
+                class="backgroundImage"
+              />
+              <div class="carousel-caption">
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-8">
@@ -68,9 +143,23 @@ export const Home = () => {
               </div>
             </div>
           </div>
-          <span className="next arrows">
-            <i class="fa fa-angle-right"></i>
-          </span>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
       </section>
       <div class="container">
@@ -141,10 +230,13 @@ export const Home = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-3 col-sm-6">
+            <Slider {...settings}>
+
+            <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="card">
                 <img
                   src="https://aquanerio.com/productImage/1/p-1.jpg"
+                  className="image-wid"
                   alt=""
                 />
                 <div className="card-body">
@@ -162,6 +254,7 @@ export const Home = () => {
               <div className="card">
                 <img
                   src="https://aquanerio.com/productImage/2/p-2.jpg"
+                  className="image-wid"
                   alt=""
                 />
                 <div className="card-body">
@@ -179,10 +272,11 @@ export const Home = () => {
               <div className="card">
                 <img
                   src="https://aquanerio.com/productImage/3/p-3.jpg"
+                  className="image-wid"
                   alt=""
                 />
                 <div className="card-body">
-                  <h5>Nerio nxt (Blue)</h5>
+                  <h5>Nerio nxt   (Blue )</h5>
                   <p className="card-text">Nerio nxt (Bluek)</p>
                   <p className="price">₹ 19490</p>
                   <a href="../login" className="btn btn-primary">
@@ -196,6 +290,7 @@ export const Home = () => {
               <div className="card">
                 <img
                   src="https://aquanerio.com/productImage/4/p-4.jpg"
+                  className="image-wid"
                   alt=""
                 />
                 <div className="card-body">
@@ -209,6 +304,145 @@ export const Home = () => {
                 </div>
               </div>
             </div>
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="card">
+                <img
+                  src="https://aquanerio.com/productImage/5/p-5.jpg"
+                  className="image-wid"
+                  alt=""
+                />
+                <div className="card-body">
+                  <h5>Nerio Cryst (Blue)</h5>
+                  <p className="card-text">Nerio Cryst (Blue)</p>
+                  <p className="price">₹ 19490</p>
+                  <a href="../login" className="btn btn-primary"><Link to={'/login'}/>
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-6 ">
+              <div className="card">
+                <img
+                  src="https://aquanerio.com/productImage/6/p-6.jpg"
+                  className="image-wid"
+                  alt=""
+                />
+                <div className="card-body">
+                  <h5>Nerio misty (White)</h5>
+                  <p className="card-text">Nerio misty (White)</p>
+                  <p className="price">₹ 14990</p>
+                  <a href="../login" className="btn btn-primary"><Link to={'/login'}/>
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-6 ">
+              <div className="card">
+                <img
+                  src="https://aquanerio.com/productImage/7/p-7.png"
+                  className="image-wid"
+                  alt=""
+                />
+                <div className="card-body">
+                  <h5>Nerio rio</h5>
+                  <p className="card-text">Ro + uv + uf + TDS control</p>
+                  <p className="price">₹ 13990</p>
+                  <a href="../login" className="btn btn-primary"><Link to={'/login'}/>
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-6 ">
+              <div className="card">
+                <img
+                  src="https://aquanerio.com/productImage/8/p-8.png"
+                  className="image-wid"
+                  alt=""
+                />
+                <div className="card-body">
+                  <h5>Nerio perl</h5>
+                  <p className="card-text">Ro + UV + UF</p>
+                  <p className="price">₹ 15890</p>
+                  <a href="../login" className="btn btn-primary"><Link to={'/login'}/>
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-6 ">
+              <div className="card">
+                <img
+                  src="https://aquanerio.com/productImage/9/p-9.png"
+                  className="image-wid"
+                  alt=""
+                />
+                <div className="card-body">
+                  <h5>Nerio Swan</h5>
+                  <p className="card-text">Ro</p>
+                  <p className="price">₹ 10500</p>
+                  <a href="../login" className="btn btn-primary"><Link to={'/login'}/>
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-6 ">
+              <div className="card">
+                <img
+                  src="https://aquanerio.com/productImage/10/p-10.png"
+                  className="image-wid"
+                  alt=""
+                />
+                <div className="card-body">
+                  <h5>Nerio unique +</h5>
+                  <p className="card-text">Nerio unique +</p>
+                  <p className="price">₹ 17490</p>
+                  <a href="../login" className="btn btn-primary"><Link to={'/login'}/>
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-6 ">
+              <div className="card">
+                <img
+                  src="https://aquanerio.com/productImage/11/p-11.png"
+                  className="image-wid"
+                  alt=""
+                />
+                <div className="card-body">
+                  <h5>Nerio Eco</h5>
+                  <p className="card-text">Nerio Eco</p>
+                  <p className="price">₹ 12990</p>
+                  <a href="../login" className="btn btn-primary"><Link to={'/login'}/>
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-6 ">
+              <div className="card">
+                <img
+                  src="https://aquanerio.com/productImage/12/p-12.png"
+                  className="image-wid"
+                  alt=""
+                />
+                <div className="card-body">
+                  <h5>Nerio pride</h5>
+                  <p className="card-text">
+                    RO + UV + UF + TDS control 
+                  </p>
+                  <p className="price">₹ 17990</p>
+                  <a href="../login" className="btn btn-primary"><Link to={'/login'}/>
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            </Slider>
           </div>
           <div className="row pad-sm">
             <div className="col-lg-6">
@@ -232,6 +466,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="row">
+            <Slider {...settings}>
             <div className="col-lg-3 col-sm-6">
               <div className="card">
                 <img
@@ -300,6 +535,45 @@ export const Home = () => {
                 </div>
               </div>
             </div>
+            <div className="col-lg-3 col-md-6 col-sm-6 ">
+              <div className="card">
+                <img
+                  src="https://aquanerio.com/productImage/17/p-5.png"
+                  alt=""
+                />
+                <div className="card-body">
+                  <h5>Nerio (ro)-05</h5>
+                  <p className="price">₹ 53990</p>
+                  <p className="card-text">
+                    purification capacity upto 100 lph
+                  </p>
+                  <a href="../login" className="btn btn-primary">
+                    <Link to={"/login"} />
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-6 ">
+              <div className="card">
+                <img
+                  src="https://aquanerio.com/productImage/18/p-6.png"
+                  alt=""
+                />
+                <div className="card-body">
+                  <h5>Nerio (ro)-04</h5>
+                  <p className="price">₹ 165000</p>
+                  <p className="card-text">
+                    purification capacity upto 250 lph
+                  </p>
+                  <a href="../login" className="btn btn-primary">
+                    <Link to={"/login"} />
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            </Slider>
           </div>
           <div className="row pad-sm">
             <div className="col-lg-6">
@@ -323,10 +597,12 @@ export const Home = () => {
             </div>
           </div>
           <div className="row">
+            <Slider {...settings}>
             <div className="col-lg-3 col-sm-6">
               <div className="card">
                 <img
                   src="https://aquanerio.com/productImage/19/p-1.png"
+                  className="wid"
                   alt=""
                 />
                 <div className="card-body">
@@ -366,6 +642,7 @@ export const Home = () => {
               <div className="card">
                 <img
                   src="https://aquanerio.com/productImage/21/p-3.png"
+                  className="wid"
                   alt=""
                 />
                 <div className="card-body">
@@ -391,7 +668,7 @@ export const Home = () => {
                 <div className="card-body">
                   <h5>Nerio full ss</h5>
                   <p className="price">₹ 146500</p>
-                  <p className="card-text">full capacity of purification</p>
+                  <p className="card-text">full capacity of  purification 5000 Lph</p>
                   <a href="../login" className="btn btn-primary">
                     <Link to={"/login"} />
                     Add to Cart
@@ -399,6 +676,25 @@ export const Home = () => {
                 </div>
               </div>
             </div>
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="card">
+                <img
+                  src="https://aquanerio.com/productImage/23/p-5.png"
+                  className="wid"
+                  alt=""
+                />
+                <div className="card-body">
+                  <h5>Heavy Capacity Ro Plant</h5>
+                  <p className="price">₹ 156500</p>
+                  <p className="card-text">a heavy purification capacity</p>
+                  <a href="../login" className="btn btn-primary">
+                    <Link to={"/login"} />
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            </Slider>
           </div>
         </div>
       </section>
@@ -526,6 +822,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="row">
+            <Slider {...setting}>
             <div className="col-lg-6 col-sm-6">
               <div className="client">
                 <img
@@ -542,6 +839,7 @@ export const Home = () => {
                 />
               </div>
             </div>
+            </Slider>
           </div>
         </div>
       </section>

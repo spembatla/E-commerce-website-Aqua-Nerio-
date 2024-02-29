@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <header>
-      <div className="header-top  d-lg-block">
+      <div className="header-top  d-lg-block d-none">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-5 col-xl-5">
@@ -41,11 +41,11 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      <div className="navigation sticky">
+      <div className="navigation ">
         <div className="container">
           <div className="row no-gutters">
             <div className="col-lg-12">
-              <nav className="navbar navbar-expand-lg">
+              <nav className="navbar navbar-expand-lg sticky-top" data-spy="affix" data-offset-top="197">
                 <a className="navbar-brand" href="../home">
                   <Link to={"/home"} />
                   <img
@@ -57,66 +57,65 @@ export const Header = () => {
                 <button
                   className="navbar-toggler"
                   type="button"
-                  data-toggle="collapse"
-                  data-target="navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
+                  toggle="collapse"
+                  data-target="#collapsibleNavbar"
+                  aria-controls="collapsibleNavbar"
                   aria-expanded="false"
-                  aria-label="Toggle navigation"
+                  aria-label="Toogle navigation"
                 >
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
+                  <span className="navbar-toggler-icon"></span>
                 </button>
                 <div
-                  className="collapse navbar-collapse sub-menu-bar"
-                  id="navbarSupportedContent"
+                  className="collapse navbar-collapse "
+                  id="collapsibleNavbar"
                 >
                   <ul className="navbar-nav m-auto">
                     <li className="nav-item">
-                      <a href="../home">
+                      <a href="../home" className="nav-link">
                         <Link to={"/"} />
                         Home
                       </a>
                     </li>
 
                     <li className="nav-item">
-                      <a href="../about">
+                      <a href="../about" className="nav-link">
                         <Link to={"/about"} />
                         About Us
                       </a>
                     </li>
-                    <li className="nav-item">
-                      <a href="#">
+                    <li className="nav-item dropdown">
+                      <a
+                        href="#"
+                        className="nav-link dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                      >
                         Our Products
-                        <button className="sub-nav-toggler">
-                          {" "}
-                          <i class="fa fa-chevron-down"></i>{" "}
-                        </button>
+                        <ul className="dropdown-menu">
+                          <li>
+                            <a className="dropdown-item" href="../domestric">
+                              <Link to={"/domestric-ro"} />
+                              Domestric RO
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="../industrial">
+                              <Link to={'/industrial-ro'}/>
+                              Industrial RO
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="../commercial">
+                              <Link to={'/commercial-ro'}/>
+                              Commercial RO
+                            </a>
+                          </li>
+                        </ul>
                       </a>
-                      <ul className="sub-menu">
-                        <li className="li">
-                          <a href="../domestric">
-                            <Link to={"/domestric-ro"} />
-                            Domestric RO
-                          </a>
-                        </li>
-                        <li className="li">
-                          <a href="../industrial">
-                            <Link to={"/industrial-ro"} />
-                            Industrial RO Plant
-                          </a>
-                        </li>
-                        <li className="li">
-                          <a href="../commerical">
-                            <Link to={"/commerical-ro"} />
-                            Commercial RO Plant
-                          </a>
-                        </li>
-                      </ul>
                     </li>
 
                     <li className="nav-item">
-                      <a href="../contact">
+                      <a href="../contact" className="nav-link">
                         <Link to={"/contact"} />
                         Contact Us
                       </a>
@@ -146,5 +145,7 @@ export const Header = () => {
         </div>
       </div>
     </header>
+    
   );
 };
+

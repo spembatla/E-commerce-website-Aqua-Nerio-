@@ -27,6 +27,7 @@ function App() {
         <Route path='/commercial-ro' element={<Commercial/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        
       </Routes>
       <Footer/>
     </div>
@@ -37,3 +38,5 @@ function App() {
 }
 
 export default App;
+
+
