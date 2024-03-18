@@ -1,3 +1,14 @@
+![Screenshot (12)](https://github.com/spembatla/E-commerce-website-Aqua-Nerio-/assets/136897506/3783952d-1b61-4ec3-b21d-50b409033efa)
+
+![Screenshot (13)](https://github.com/spembatla/E-commerce-website-Aqua-Nerio-/assets/136897506/c95b1e44-e306-42e6-8f4f-2120082369e8)
+
+![Screenshot (14)](https://github.com/spembatla/E-commerce-website-Aqua-Nerio-/assets/136897506/b1c89580-baf1-488d-835d-589ca907de54)
+
+![Screenshot (15)](https://github.com/spembatla/E-commerce-website-Aqua-Nerio-/assets/136897506/67c28ffa-3120-4830-b61c-eb6e3468f508)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
